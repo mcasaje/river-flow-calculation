@@ -2,12 +2,17 @@
 
 ## Quick Start
 
-### 1. Compile Java
+### 1. Create the Executable Jar File
 
-- Navigate to the Java `src` directory on the terminal
-- Run `javac -d ../out com/mcasaje/riverflowcalculation`
+- Navigate to the root directory where the `pom.xml` 
+- Run `mvn clean package`
 
+### 2. Running the App
 
-### 2. Run the Main class
-- Navigate to the `out` directory created in step 1.
-- Run `java com/mcasaje/riverflowcaluclation/Main`
+- Navigate to the root directory
+- Run `java -cp JAR_FILE com.mcasaje.riverflowcalculation.App` where `JAR_FILE` is the name of
+the jar file in your target directory including its extension `.jar`
+- Example:
+```
+java -cp target/riverflowcalculation-1.0-SNAPSHOT.jar com.mcasaje.riverflowcalculation.App
+```
