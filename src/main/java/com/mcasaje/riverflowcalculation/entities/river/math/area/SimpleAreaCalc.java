@@ -1,4 +1,4 @@
-package com.mcasaje.riverflowcalculation.entities.river.math;
+package com.mcasaje.riverflowcalculation.entities.river.math.area;
 
 import java.math.BigDecimal;
 
