@@ -1,12 +1,14 @@
 package com.mcasaje.riverflowcalculation.entities.river.crosssection.metric.meters;
 
 import com.mcasaje.riverflowcalculation.entities.river.crosssection.CrossSection;
+import com.mcasaje.riverflowcalculation.entities.river.crosssection.Subsection;
+import com.mcasaje.riverflowcalculation.entities.river.crosssection.metric.MetricUnit;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
-class MetricMetersCrossSection extends CrossSection {
+class MetricMetersCrossSection extends CrossSection<MetricUnit> {
 
     private List<MetricMetersSubsection> subsections;
     private MetricMetersSubsectionFactory subsectionFactory;
@@ -26,6 +28,12 @@ class MetricMetersCrossSection extends CrossSection {
     @Override
     public int getSubsectionCount() {
         return subsections.size();
+    }
+
+    @Override
+    public Subsection<MetricUnit> getSubsection(int index) {
+        MetricMetersSubsection subsection = subsections.get(index);
+        return subsectionFactory.cloneOf(subsection);
     }
 
     @Override

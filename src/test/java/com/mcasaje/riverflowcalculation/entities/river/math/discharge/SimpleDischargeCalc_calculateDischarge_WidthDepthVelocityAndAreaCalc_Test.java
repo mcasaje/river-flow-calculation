@@ -35,8 +35,7 @@ public class SimpleDischargeCalc_calculateDischarge_WidthDepthVelocityAndAreaCal
         BigDecimal depth = BigDecimal.valueOf(23.2);
         BigDecimal velocity = BigDecimal.valueOf(2.5);
         BigDecimal expectedDischarge = BigDecimal.valueOf(319.0);
-        BigDecimal actualDischarge = sut.calculateDischarge(width, depth, velocity, areaCalc);
-        expectedDischarge.compareTo(actualDischarge);
+        BigDecimal actualDischarge = sut.calculateDischarge(depth, width, velocity, areaCalc);
         Assert.assertEquals(0, expectedDischarge.compareTo(actualDischarge));
     }
 
@@ -45,7 +44,7 @@ public class SimpleDischargeCalc_calculateDischarge_WidthDepthVelocityAndAreaCal
         BigDecimal width = null;
         BigDecimal depth = BigDecimal.valueOf(23.2);
         BigDecimal velocity = BigDecimal.valueOf(2.5);
-        sut.calculateDischarge(width, depth, velocity, areaCalc);
+        sut.calculateDischarge(depth, width, velocity, areaCalc);
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -53,7 +52,7 @@ public class SimpleDischargeCalc_calculateDischarge_WidthDepthVelocityAndAreaCal
         BigDecimal width = BigDecimal.valueOf(5.5);
         BigDecimal depth = null;
         BigDecimal velocity = BigDecimal.valueOf(2.5);
-        sut.calculateDischarge(width, depth, velocity, areaCalc);
+        sut.calculateDischarge(depth, width, velocity, areaCalc);
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -61,7 +60,7 @@ public class SimpleDischargeCalc_calculateDischarge_WidthDepthVelocityAndAreaCal
         BigDecimal width = BigDecimal.valueOf(5.5);
         BigDecimal depth = BigDecimal.valueOf(23.2);
         BigDecimal velocity = null;
-        sut.calculateDischarge(width, depth, velocity, areaCalc);
+        sut.calculateDischarge(depth, width, velocity, areaCalc);
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -70,7 +69,7 @@ public class SimpleDischargeCalc_calculateDischarge_WidthDepthVelocityAndAreaCal
         BigDecimal depth = BigDecimal.valueOf(23.2);
         BigDecimal velocity = BigDecimal.valueOf(2.5);
         AreaCalc nullAreaCalc = null;
-        sut.calculateDischarge(width, depth, velocity, nullAreaCalc);
+        sut.calculateDischarge(depth, width, velocity, nullAreaCalc);
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -79,7 +78,7 @@ public class SimpleDischargeCalc_calculateDischarge_WidthDepthVelocityAndAreaCal
         BigDecimal depth = null;
         BigDecimal velocity = null;
         AreaCalc nullAreaCalc = null;
-        sut.calculateDischarge(width, depth, velocity, nullAreaCalc);
+        sut.calculateDischarge(depth, width, velocity, nullAreaCalc);
     }
 
 }
