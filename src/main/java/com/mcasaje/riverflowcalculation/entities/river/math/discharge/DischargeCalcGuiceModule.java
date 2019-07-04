@@ -6,6 +6,6 @@ public class DischargeCalcGuiceModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        bind(DischargeCalc.class).to(SimpleDischargeCalc.class);
+        bind(DischargeCalc.class).to(SimpleDischargeCalc.class).asEagerSingleton();
     }
 }

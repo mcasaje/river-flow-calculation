@@ -6,6 +6,6 @@ public class AreaCalcGuiceModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        bind(AreaCalc.class).to(SimpleAreaCalc.class);
+        bind(AreaCalc.class).to(SimpleAreaCalc.class).asEagerSingleton();
     }
 }
