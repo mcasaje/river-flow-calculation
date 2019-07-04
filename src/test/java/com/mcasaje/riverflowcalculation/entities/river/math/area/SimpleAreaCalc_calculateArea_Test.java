@@ -21,7 +21,7 @@ public class SimpleAreaCalc_calculateArea_Test {
         BigDecimal depth = BigDecimal.TEN;
         BigDecimal expectedArea = BigDecimal.valueOf(20);
         BigDecimal actualArea = sut.calculateArea(width, depth);
-        Assert.assertEquals(expectedArea, actualArea);
+        Assert.assertEquals(0, expectedArea.compareTo(actualArea));
     }
 
     @Test
@@ -30,7 +30,7 @@ public class SimpleAreaCalc_calculateArea_Test {
         BigDecimal depth = BigDecimal.valueOf(11.9);
         BigDecimal expectedArea = BigDecimal.valueOf(41.65);
         BigDecimal actualArea = sut.calculateArea(width, depth);
-        Assert.assertEquals(expectedArea, actualArea);
+        Assert.assertEquals(0, expectedArea.compareTo(actualArea));
     }
 
     @Test(expected = IllegalArgumentException.class)

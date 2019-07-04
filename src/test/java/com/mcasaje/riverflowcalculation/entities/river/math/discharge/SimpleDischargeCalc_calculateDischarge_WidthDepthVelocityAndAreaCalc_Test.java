@@ -36,7 +36,8 @@ public class SimpleDischargeCalc_calculateDischarge_WidthDepthVelocityAndAreaCal
         BigDecimal velocity = BigDecimal.valueOf(2.5);
         BigDecimal expectedDischarge = BigDecimal.valueOf(319.0);
         BigDecimal actualDischarge = sut.calculateDischarge(width, depth, velocity, areaCalc);
-        Assert.assertEquals(expectedDischarge, actualDischarge);
+        expectedDischarge.compareTo(actualDischarge);
+        Assert.assertEquals(0, expectedDischarge.compareTo(actualDischarge));
     }
 
     @Test(expected = IllegalArgumentException.class)
