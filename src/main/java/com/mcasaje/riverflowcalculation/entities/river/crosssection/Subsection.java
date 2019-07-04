@@ -1,4 +1,4 @@
-package com.mcasaje.riverflowcalculation.entities.river.subsection;
+package com.mcasaje.riverflowcalculation.entities.river.crosssection;
 
 import java.math.BigDecimal;
 
