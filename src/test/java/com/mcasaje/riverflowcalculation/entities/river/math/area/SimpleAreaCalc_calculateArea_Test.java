@@ -6,9 +6,9 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 
-public class SimpleAreaCalcTest {
+public class SimpleAreaCalc_calculateArea_Test {
 
-    AreaCalc sut;
+    private AreaCalc sut;
 
     @Before
     public void setup() {
