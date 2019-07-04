@@ -1,10 +1,16 @@
 package com.mcasaje.riverflowcalculation.entities.river.math.discharge;
 
+import com.mcasaje.riverflowcalculation.entities.river.crosssection.CrossSection;
 import com.mcasaje.riverflowcalculation.entities.river.math.area.AreaCalc;
 
 import java.math.BigDecimal;
 
 class SimpleDischargeCalc implements DischargeCalc {
+
+    @Override
+    public BigDecimal calculateDischarge(CrossSection crossSection) {
+        return null;
+    }
 
     @Override
     public BigDecimal calculateDischarge(BigDecimal width, BigDecimal depth, BigDecimal velocity, AreaCalc areaCalc) {
