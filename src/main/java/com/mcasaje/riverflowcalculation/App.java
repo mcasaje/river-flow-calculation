@@ -18,14 +18,12 @@ public class App {
 
     public static void main(String[] args) {
 
-        // Setup
         Injector injector = getInjector();
         MetricMetersCrossSectionBuilder crossSectionBuilder =
                 injector.getInstance(MetricMetersCrossSectionBuilder.class);
         DischargeCalc dischargeCalc = injector.getInstance(DischargeCalc.class);
         AreaCalc areaCalc = injector.getInstance(AreaCalc.class);
 
-        // Assumption: River data will come from an external source such as a database or an API
         CrossSection crossSection1 = crossSectionBuilder
                 .addSubsection(10, 5, 1)
                 .addSubsection(10.2, 5, 1)
