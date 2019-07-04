@@ -2,18 +2,12 @@ package com.mcasaje.riverflowcalculation.entities.river.crosssection;
 
 import java.math.BigDecimal;
 
-public abstract class CrossSection<SYSTEM_OF_MEASUREMENT extends Enum> {
+public abstract class CrossSection {
 
     /**
      * @return the total number of subsections
      */
     public abstract int getSubsectionCount();
-
-    /**
-     * @param index position of the subsection to return - starting at index 0
-     * @return the subsection at the specificed index
-     */
-    public abstract Subsection<SYSTEM_OF_MEASUREMENT> getSubsection(int index);
 
     /**
      * @param index position of the subsection to return - starting at index 0
