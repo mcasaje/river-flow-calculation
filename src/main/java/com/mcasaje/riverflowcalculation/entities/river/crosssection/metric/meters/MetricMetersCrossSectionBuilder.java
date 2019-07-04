@@ -2,7 +2,7 @@ package com.mcasaje.riverflowcalculation.entities.river.crosssection.metric.mete
 
 public interface MetricMetersCrossSectionBuilder {
 
-    public void addSubsection(double depth, double width, double velocity);
+    public MetricMetersCrossSectionBuilder addSubsection(double depth, double width, double velocity);
 
     public MetricMetersCrossSection build();
 

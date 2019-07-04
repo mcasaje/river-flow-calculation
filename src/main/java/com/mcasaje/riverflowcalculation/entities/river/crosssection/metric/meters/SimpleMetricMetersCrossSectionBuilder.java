@@ -16,9 +16,10 @@ class SimpleMetricMetersCrossSectionBuilder implements MetricMetersCrossSectionB
     }
 
     @Override
-    public void addSubsection(double depth, double width, double velocity) {
+    public MetricMetersCrossSectionBuilder addSubsection(double depth, double width, double velocity) {
         MetricMetersSubsection newSubsection = factory.create(depth, width, velocity);
         subsections.add(newSubsection);
+        return this;
     }
 
     @Override
