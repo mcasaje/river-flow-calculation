@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
-public class MetricMetersCrossSection extends CrossSection<MetricUnit> {
+class MetricMetersCrossSection extends CrossSection<MetricUnit> {
 
     private List<MetricMetersSubsection> subsections;
     private MetricMetersSubsectionFactory subsectionFactory;
