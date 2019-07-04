@@ -2,18 +2,18 @@ package com.mcasaje.riverflowcalculation.entities.river.subsection;
 
 import java.math.BigDecimal;
 
-public interface Subsection<SYSTEM_OF_MEASUREMENT> {
+public abstract class Subsection<SYSTEM_OF_MEASUREMENT extends Enum> {
 
-    public BigDecimal getDepth();
+    public abstract BigDecimal getDepth();
 
-    public BigDecimal getWidth();
+    public abstract BigDecimal getWidth();
 
-    public BigDecimal getVelocity();
+    public abstract BigDecimal getVelocity();
 
-    public SYSTEM_OF_MEASUREMENT getDepthUnits();
+    public abstract SYSTEM_OF_MEASUREMENT getDepthUnits();
 
-    public SYSTEM_OF_MEASUREMENT getWidthUnits();
+    public abstract SYSTEM_OF_MEASUREMENT getWidthUnits();
 
-    public SYSTEM_OF_MEASUREMENT getVelocityUnits();
+    public abstract SYSTEM_OF_MEASUREMENT getVelocityUnits();
 
 }

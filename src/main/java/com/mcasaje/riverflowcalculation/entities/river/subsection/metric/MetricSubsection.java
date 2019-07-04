@@ -4,7 +4,7 @@ import com.mcasaje.riverflowcalculation.entities.river.subsection.Subsection;
 
 import java.math.BigDecimal;
 
-public abstract class MetricSubsection implements Subsection<MetricUnit> {
+public abstract class MetricSubsection extends Subsection<MetricUnit> {
 
     private final BigDecimal depth;
     private final BigDecimal width;
